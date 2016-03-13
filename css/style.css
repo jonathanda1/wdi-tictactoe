@@ -1,0 +1,17 @@
+title {
+  text-align: center;
+  font: Arial;
+  font-size: 12px;
+}
+
+body {
+  text-align: center;
+}
+button {
+  height: 150px;
+  width: 150px;
+}
+
+#refresh {
+  text-align: center;
+}
