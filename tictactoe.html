@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="js/tictactoe.js"></script>
     <link rel="stylesheet" href=css/style.css
     <title>TIC-TAC-TOE</title>
 </head>
@@ -37,112 +36,129 @@
 
 
 <!-- Javascript functions -->
+<script src="js/tictactoe.js"></script>
 <script>
 
 var turn = 0;
 
-
 function press1() {
  if (turn%2==0) {
    document.getElementById("1").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("1").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
+  winLogic();
 }
 
 function press2() {
    if (turn%2==0) {
    document.getElementById("2").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("2").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
+  winLogic();
 }
 
 
 function press3() {
    if (turn%2==0) {
    document.getElementById("3").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("3").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
+  winLogic();
 }
 
 
 function press4() {
    if (turn%2==0) {
    document.getElementById("4").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("4").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
 }
 
 function press5() {
    if (turn%2==0) {
    document.getElementById("5").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("5").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
 }
 
 function press6() {
    if (turn%2==0) {
    document.getElementById("6").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("6").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
 }
 
 function press7() {
    if (turn%2==0) {
    document.getElementById("7").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("7").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
 }
 
 function press8() {
    if (turn%2==0) {
    document.getElementById("8").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("8").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
 }
 
 function press9() {
    if (turn%2==0) {
    document.getElementById("9").innerHTML = "X"
- }
+  }
  else if (turn%2==1) {
    document.getElementById("9").innerHTML = "O"
- }
+  }
   turn++;
-  console.log(turn)
 }
 
+function winLogic() {
+  if (document.getElementById("1").innerHTML == document.getElementById("2").innerHTML && document.getElementById("1").innerHTML== document.getElementById("3").innerHTML) {
+      alert("You Win!")
+  }
+  else if (document.getElementById("1").innerHTML == document.getElementById("4").innerHTML && document.getElementById("1").innerHTML == document.getElementById("7").innerHTML) {
+      alert("You Win!")
+  }
+  else if (document.getElementById("1").innerHTML == document.getElementById("5").innerHTML && document.getElementById("1").innerHTML == document.getElementById("9").innerHTML) {
+      alert("You Win!")
+  }
+  else if (document.getElementById("2").innerHTML == document.getElementById("5").innerHTML && document.getElementById("2").innerHTML == document.getElementById("8").innerHTML) {
+      alert("You Win!")
+  }
+  else if (document.getElementById("3").innerHTML == document.getElementById("6").innerHTML && document.getElementById("3").innerHTML == document.getElementById("9").innerHTML) {
+      alert("You Win!")
+  }
+  else if (document.getElementById("3").innerHTML == document.getElementById("5").innerHTML && document.getElementById("3").innerHTML == document.getElementById("7").innerHTML) {
+      alert("You Win!")
+  }
+  else if (document.getElementById("4").innerHTML == document.getElementById("5").innerHTML && document.getElementById("4").innerHTML == document.getElementById("6").innerHTML) {
+      alert("You Win!")
+  }
+}
 
 </script>
 
