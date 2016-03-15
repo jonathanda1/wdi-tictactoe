@@ -79,6 +79,7 @@ function press2() {
 }
 
 
+
 function press3() {
  if (a3.innerHTML != "X" && a3.innerHTML != "O") {
    if (turn%2==0) {
@@ -173,6 +174,7 @@ function press9() {
 
 
 function winLogic() {
+  console.log(turn)
   if ((a1.innerHTML == a2.innerHTML && a1.innerHTML== a3.innerHTML) && a1.innerHTML.length >0) {
       alert("You Win!")
   }
@@ -198,8 +200,6 @@ function winLogic() {
       alert ("It's a tie")
  }
 }
-
-
 
 </script>
 
