@@ -1,7 +1,9 @@
 title {
   text-align: center;
-  font: Arial;
-  font-size: 12px;
+}
+
+h1 {
+  color: dodgerblue;
 }
 
 body {
@@ -10,8 +12,21 @@ body {
 button {
   height: 150px;
   width: 150px;
+  background: url("http://vignette1.wikia.nocookie.net/joke-battles/images/4/40/18360-doge-doge-simple.jpg/revision/latest?cb=20151209161638");
+  background-size: 100%;
+  background-size: 150px auto;
+  vertical-align: top;
 }
 
 #refresh {
   text-align: center;
+  border: 1px red;
 }
+
+#clear {
+  height:80px;
+  width: 150px;
+  border: red 1px solid;
+}
+
+

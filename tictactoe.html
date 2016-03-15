@@ -2,36 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href=css/style.css
+    <link rel="stylesheet" href=css/style.css>
     <title>TIC-TAC-TOE</title>
 </head>
 
 
 <body>
 
+<h1> tic-tac-toe </h1>
+
 <!-- Below represents each button on the 3x3 grid -->
 <div id="container">
   <div class="row1">
-    <button onclick="press1()" id="1">1</button>
-    <button onclick="press2()" id="2">2</button>
-    <button onclick="press3()" id="3">3</button>
+    <button onclick="press1()" id="1"></button>
+    <button onclick="press2()" id="2"></button>
+    <button onclick="press3()" id="3"></button>
   </div>
   <div class="row2">
-    <button onclick="press4()" id="4">4</button>
-    <button onclick="press5()" id="5">5</button>
-    <button onclick="press6()" id="6">6</button>
+    <button onclick="press4()" id="4"></button>
+    <button onclick="press5()" id="5"></button>
+    <button onclick="press6()" id="6"></button>
   </div>
   <div class="row3">
-    <button onclick="press7()" id="7">7</button>
-    <button onclick="press8()" id="8">8</button>
-    <button onclick="press9()" id="9">9</button>
+    <button onclick="press7()" id="7"></button>
+    <button onclick="press8()" id="8"></button>
+    <button onclick="press9()" id="9"></button>
   </div>
 </div>
 
 <!-- End of 3x3 Grid -->
 
-<div id="refresh">
-<a href="javascript:history.go(0)">Refresh</a>
+<div id="Clear">
+Clear
 </div>
 
 
@@ -40,131 +42,164 @@
 <script>
 
 var turn = 0;
+var a1 = document.getElementById("1")
+var a2 = document.getElementById("2")
+var a3 = document.getElementById("3")
+var b1 = document.getElementById("4")
+var b2 = document.getElementById("5")
+var b3 = document.getElementById("6")
+var c1 = document.getElementById("7")
+var c2 = document.getElementById("8")
+var c3 = document.getElementById("9")
 
 function press1() {
- if (turn%2==0) {
-   document.getElementById("1").innerHTML = "X"
+ if (a1.innerHTML != "X" && a1.innerHTML != "O") {
+  if (turn%2==0) {
+   a1.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("1").innerHTML = "O"
+   a1.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 function press2() {
+  if (a2.innerHTML != "X" && a2.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("2").innerHTML = "X"
+   a2.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("2").innerHTML = "O"
+   a2.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 
 function press3() {
+ if (a3.innerHTML != "X" && a3.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("3").innerHTML = "X"
+   a3.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("3").innerHTML = "O"
+   a3.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 
 function press4() {
+ if (b1.innerHTML != "X" && b1.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("4").innerHTML = "X"
+   b1.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("4").innerHTML = "O"
+   b1.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 function press5() {
+if (b2.innerHTML != "X" && b2.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("5").innerHTML = "X"
+   b2.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("5").innerHTML = "O"
+   b2.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 function press6() {
+if (b3.innerHTML != "X" && b3.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("6").innerHTML = "X"
+   b3.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("6").innerHTML = "O"
+   b3.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 function press7() {
+if (c1.innerHTML != "X" && c1.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("7").innerHTML = "X"
+   c1.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("7").innerHTML = "O"
+   c1.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 function press8() {
+if (c2.innerHTML != "X" && c2.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("8").innerHTML = "X"
+   c2.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("8").innerHTML = "O"
+   c2.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
 function press9() {
+ if (c3.innerHTML != "X" && c3.innerHTML != "O") {
    if (turn%2==0) {
-   document.getElementById("9").innerHTML = "X"
+   c3.innerHTML = "X"
   }
  else if (turn%2==1) {
-   document.getElementById("9").innerHTML = "O"
+   c3.innerHTML = "O"
   }
   turn++;
   winLogic();
+ }
 }
 
+
 function winLogic() {
-  if (document.getElementById("1").innerHTML == document.getElementById("2").innerHTML && document.getElementById("1").innerHTML== document.getElementById("3").innerHTML) {
+  if ((a1.innerHTML == a2.innerHTML && a1.innerHTML== a3.innerHTML) && a1.innerHTML.length >0) {
       alert("You Win!")
   }
-  else if (document.getElementById("1").innerHTML == document.getElementById("4").innerHTML && document.getElementById("1").innerHTML == document.getElementById("7").innerHTML) {
+  else if ((a1.innerHTML == b1.innerHTML && a1.innerHTML == c1.innerHTML) && a1.innerHTML.length > 0) {
       alert("You Win!")
   }
-  else if (document.getElementById("1").innerHTML == document.getElementById("5").innerHTML && document.getElementById("1").innerHTML == document.getElementById("9").innerHTML) {
+  else if ((a1.innerHTML == b2.innerHTML && a1.innerHTML == c3.innerHTML) && a1.innerHTML.length >0) {
       alert("You Win!")
   }
-  else if (document.getElementById("2").innerHTML == document.getElementById("5").innerHTML && document.getElementById("2").innerHTML == document.getElementById("8").innerHTML) {
+  else if ((a2.innerHTML == b2.innerHTML && a2.innerHTML == c2.innerHTML) && a2.innerHTML.length >0) {
       alert("You Win!")
   }
-  else if (document.getElementById("3").innerHTML == document.getElementById("6").innerHTML && document.getElementById("3").innerHTML == document.getElementById("9").innerHTML) {
+  else if ((a3.innerHTML == b3.innerHTML && a3.innerHTML == c3.innerHTML) && a3.innerHTML.length>0) {
       alert("You Win!")
   }
-  else if (document.getElementById("3").innerHTML == document.getElementById("5").innerHTML && document.getElementById("3").innerHTML == document.getElementById("7").innerHTML) {
+  else if ((a3.innerHTML == b2.innerHTML && a3.innerHTML == c1.innerHTML) && a3.innerHTML.length>0) {
       alert("You Win!")
   }
-  else if (document.getElementById("4").innerHTML == document.getElementById("5").innerHTML && document.getElementById("4").innerHTML == document.getElementById("6").innerHTML) {
+  else if ((b1.innerHTML == b2.innerHTML && b1.innerHTML == b3.innerHTML) && b1.innerHTML.length>0) {
       alert("You Win!")
   }
+  else if (turn === 9) {
+      alert ("It's a tie")
+ }
 }
+
+
 
 </script>
 
